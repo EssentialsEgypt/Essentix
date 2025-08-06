@@ -5,6 +5,11 @@ import * as RechartsPrimitive from "recharts"
 
 import { cn } from "@/lib/utils"
 
+// Utility function to set CSS custom properties
+const setCSSProperty = (element: HTMLElement, property: string, value: string) => {
+  element.style.setProperty(property, value)
+}
+
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
@@ -86,13 +91,13 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
             ([theme, prefix]) => `
 ${prefix} [data-chart=${id}] {
 ${colorConfig
-  .map(([key, itemConfig]) => {
-    const color =
-      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
-      itemConfig.color
-    return color ? `  --color-${key}: ${color};` : null
-  })
-  .join("\n")}
+                .map(([key, itemConfig]) => {
+                  const color =
+                    itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
+                    itemConfig.color
+                  return color ? `  --color-${key}: ${color};` : null
+                })
+                .join("\n")}
 }
 `
           )
@@ -201,8 +206,14 @@ function ChartTooltipContent({
                   ) : (
                     !hideIndicator && (
                       <div
+                        ref={(el) => {
+                          if (el) {
+                            setCSSProperty(el, "--color-bg", indicatorColor)
+                            setCSSProperty(el, "--color-border", indicatorColor)
+                          }
+                        }}
                         className={cn(
-                          "shrink-0 rounded-[2px] border-(--color-border) bg-(--color-bg)",
+                          "shrink-0 rounded-[2px] border-(--color-border) bg-(--color-bg) [&]:bg-[var(--color-bg)] [&]:border-[var(--color-border)]",
                           {
                             "h-2.5 w-2.5": indicator === "dot",
                             "w-1": indicator === "line",
@@ -211,12 +222,6 @@ function ChartTooltipContent({
                             "my-0.5": nestLabel && indicator === "dashed",
                           }
                         )}
-                        style={
-                          {
-                            "--color-bg": indicatorColor,
-                            "--color-border": indicatorColor,
-                          } as React.CSSProperties
-                        }
                       />
                     )
                   )}
@@ -283,17 +288,19 @@ function ChartLegendContent({
           <div
             key={item.value}
             className={cn(
-              "[&>svg]:text-muted-foreground flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3"
+              "flex items-center gap-1.5 [&>svg]:text-muted-foreground [&>svg]:h-3 [&>svg]:w-3"
             )}
           >
             {itemConfig?.icon && !hideIcon ? (
               <itemConfig.icon />
             ) : (
               <div
-                className="h-2 w-2 shrink-0 rounded-[2px]"
-                style={{
-                  backgroundColor: item.color,
+                ref={(el) => {
+                  if (el) {
+                    setCSSProperty(el, "--chart-legend-color", item.color)
+                  }
                 }}
+                className="h-2 w-2 shrink-0 rounded-[2px] bg-[var(--chart-legend-color)]"
               />
             )}
             {itemConfig?.label}
@@ -316,8 +323,8 @@ function getPayloadConfigFromPayload(
 
   const payloadPayload =
     "payload" in payload &&
-    typeof payload.payload === "object" &&
-    payload.payload !== null
+      typeof payload.payload === "object" &&
+      payload.payload !== null
       ? payload.payload
       : undefined
 

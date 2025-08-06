@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { verifyJWT } from "../../../../utils/auth.js";
+import { verifyJWT } from "../../../../utils/auth";
 import supabase from "../../../utils/supabaseClient";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

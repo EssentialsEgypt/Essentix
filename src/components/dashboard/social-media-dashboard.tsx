@@ -25,6 +25,7 @@ import { AudienceTracker } from "./audience-tracker"
 import { WebsiteAnalytics } from "./website-analytics"
 import { AdIdeaGenerator } from "./ad-idea-generator"
 import { AutoMessages } from "./auto-messages"
+import { TeamManager } from "./team-manager"
 
 const sidebarItems = [
   { id: "dashboard", label: "Dashboard", icon: Home },
@@ -36,6 +37,7 @@ const sidebarItems = [
   { id: "website", label: "Website Analytics", icon: Globe },
   { id: "ideas", label: "Ad Ideas", icon: Lightbulb },
   { id: "messages", label: "Auto Messages", icon: MessageSquare },
+  { id: "team", label: "Team Manager", icon: Users },
 ]
 
 export function SocialMediaDashboard() {
@@ -61,6 +63,8 @@ export function SocialMediaDashboard() {
         return <AdIdeaGenerator />
       case "messages":
         return <AutoMessages />
+      case "team":
+        return <TeamManager />
       default:
         return <DashboardOverview />
     }

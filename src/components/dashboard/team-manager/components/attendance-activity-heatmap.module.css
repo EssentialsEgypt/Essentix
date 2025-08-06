@@ -1,0 +1,62 @@
+.heatmapCell {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.heatmapCellHigh {
+  color: white;
+}
+
+.heatmapCellLow {
+  color: rgb(156 163 175);
+}
+
+.engagementLevel0 {
+  background-color: rgba(59, 130, 246, 0);
+}
+
+.engagementLevel10 {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.engagementLevel20 {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.engagementLevel30 {
+  background-color: rgba(59, 130, 246, 0.3);
+}
+
+.engagementLevel40 {
+  background-color: rgba(59, 130, 246, 0.4);
+}
+
+.engagementLevel50 {
+  background-color: rgba(59, 130, 246, 0.5);
+}
+
+.engagementLevel60 {
+  background-color: rgba(59, 130, 246, 0.6);
+}
+
+.engagementLevel70 {
+  background-color: rgba(59, 130, 246, 0.7);
+}
+
+.engagementLevel80 {
+  background-color: rgba(59, 130, 246, 0.8);
+}
+
+.engagementLevel90 {
+  background-color: rgba(59, 130, 246, 0.9);
+}
+
+.engagementLevel100 {
+  background-color: rgba(59, 130, 246, 1);
+} 

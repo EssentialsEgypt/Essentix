@@ -1,36 +1,40 @@
 "use client"
 
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Check, Star, Zap, Brain, Users, DollarSign, Clock, ArrowRight, Play, Shield, Sparkles } from "lucide-react"
+import {
+    Check, Star, Zap, Brain, Users, DollarSign, Clock, ArrowRight,
+    Play, Shield, Sparkles, TrendingUp, Target, MessageSquare,
+    BarChart3, Calendar, Crown, Gift, Activity, Heart, Eye
+} from "lucide-react"
+import { Header, PageHeader } from "@/components/ui/header"
 
 export default function LandingPage() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
             {/* Premium Animated Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(236,72,153,0.15),transparent_50%)] animate-pulse" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(147,51,234,0.1),transparent_50%)] animate-pulse delay-1000" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.05),transparent_70%)] animate-pulse delay-2000" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(232,79,227,0.15),transparent_50%)] animate-pulse" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(131,56,236,0.1),transparent_50%)] animate-pulse delay-1000" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(232,79,227,0.05),transparent_70%)] animate-pulse delay-2000" />
 
             {/* Navigation */}
             <nav className="relative z-10 flex items-center justify-between p-6">
                 <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
                         <Brain className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-xl font-bold text-white">Essentials Enhanced</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                    <Button variant="ghost" className="text-white hover:text-purple-300">
+                    <Button variant="ghost" className="text-white hover:text-pink-300">
                         Features
                     </Button>
-                    <Button variant="ghost" className="text-white hover:text-purple-300">
+                    <Button variant="ghost" className="text-white hover:text-pink-300">
                         Pricing
                     </Button>
-                    <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+                    <Button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700">
                         Get Started
                     </Button>
                 </div>
@@ -47,19 +51,17 @@ export default function LandingPage() {
 
                     {/* Main Headline */}
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight tracking-tight drop-shadow-2xl animate-slide-up">
-                        The Business Operating System
+                        Your Entire Business.
+                    </h1>
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tight drop-shadow-2xl animate-slide-up">
+                        <span className="bg-gradient-to-r from-pink-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
+                            One AI Operating System.
+                        </span>
                     </h1>
 
-                    {/* Subheadline with Premium Pink */}
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight animate-slide-up-delay">
-                        <span className="bg-gradient-to-r from-pink-400 via-pink-500 to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
-                            Powered by Real AI
-                        </span>
-                    </h2>
-
-                    {/* Tagline */}
+                    {/* Subheadline */}
                     <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto font-light leading-relaxed animate-fade-in-delay">
-                        All your tools. One dashboard. Zero wasted hours.
+                        Essentials Enhanced replaces 100+ hours/week of work with smart tools, real-time alerts, and a system that thinks for you.
                     </p>
 
                     {/* Premium Buttons */}
@@ -69,7 +71,7 @@ export default function LandingPage() {
                             className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white text-lg px-10 py-6 rounded-full shadow-xl shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300 transform hover:scale-105 border-0 font-semibold"
                         >
                             <Zap className="w-6 h-6 mr-3" />
-                            Get Started Free
+                            Try it now · No code · No extra hires
                         </Button>
                         <Button
                             size="lg"
@@ -86,7 +88,7 @@ export default function LandingPage() {
                 <div className="mt-20 animate-fade-in-delay">
                     <div className="relative max-w-6xl mx-auto">
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/30 to-purple-600/30 rounded-3xl blur-3xl animate-pulse" />
-                        <div className="relative bg-slate-800/30 backdrop-blur-xl rounded-3xl border border-white/10 p-8 shadow-2xl shadow-black/20">
+                        <div className="relative bg-gray-800/30 backdrop-blur-xl rounded-3xl border border-white/10 p-8 shadow-2xl shadow-black/20">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                                     <div className="h-4 bg-gradient-to-r from-pink-500/40 to-purple-500/40 rounded mb-2" />
@@ -109,105 +111,742 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Comparison Section */}
+            {/* Section 1: Why Choose Us? */}
             <section className="relative z-10 px-6 py-20">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            What Makes Us Different?
+                            Why Top Brands Trust Essentials Enhanced
                         </h2>
-                        <p className="text-xl text-gray-300">
-                            While others give you reports, we give you intelligence.
+                        <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                            We&apos;re not just another dashboard. We&apos;re your AI-powered operating system — built to do the thinking, tracking, and execution for you.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-purple-500/20">
-                            <CardHeader>
-                                <CardTitle className="text-2xl text-white flex items-center">
-                                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3">
-                                        <Brain className="w-5 h-5 text-white" />
+                    {/* We replace tools, not just improve them */}
+                    <div className="bg-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700 mb-12">
+                        <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                            <Brain className="w-6 h-6 mr-3 text-pink-400" />
+                            🧠 We replace tools, not just improve them:
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="bg-gray-700/50 rounded-xl p-6">
+                                <div className="flex items-center mb-3">
+                                    <Check className="w-5 h-5 text-green-400 mr-3" />
+                                    <span className="text-white font-semibold">Instead of using 6 different apps</span>
+                                </div>
+                                <p className="text-gray-300 text-sm">you&apos;ll manage your entire business from one place.</p>
+                            </div>
+                            <div className="bg-gray-700/50 rounded-xl p-6">
+                                <div className="flex items-center mb-3">
+                                    <Check className="w-5 h-5 text-green-400 mr-3" />
+                                    <span className="text-white font-semibold">Instead of hiring 3 extra people</span>
+                                </div>
+                                <p className="text-gray-300 text-sm">you&apos;ll get automated alerts, AI tasks, and predictive analysis.</p>
+                            </div>
+                            <div className="bg-gray-700/50 rounded-xl p-6">
+                                <div className="flex items-center mb-3">
+                                    <Check className="w-5 h-5 text-green-400 mr-3" />
+                                    <span className="text-white font-semibold">Instead of reading dashboards</span>
+                                </div>
+                                <p className="text-gray-300 text-sm">our AI reads you what matters.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Results You'll See */}
+                    <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/20 mb-12">
+                        <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                            <TrendingUp className="w-6 h-6 mr-3 text-green-400" />
+                            📈 Results You'll See:
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div className="text-center">
+                                <div className="text-3xl font-bold text-green-400 mb-2">+80%</div>
+                                <div className="text-gray-300 text-sm">team productivity</div>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-3xl font-bold text-red-400 mb-2">-70%</div>
+                                <div className="text-gray-300 text-sm">time wasted on tracking or manual reports</div>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-3xl font-bold text-green-400 mb-2">+30%</div>
+                                <div className="text-gray-300 text-sm">sales lift using AI-led campaign suggestions</div>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-3xl font-bold text-blue-400 mb-2">Lower</div>
+                                <div className="text-gray-300 text-sm">ad costs from smart optimization & spend warnings</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Essentials Enhanced = All-in-One */}
+                    <div className="bg-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700 mb-12">
+                        <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                            <Sparkles className="w-6 h-6 mr-3 text-pink-400" />
+                            🧩 Essentials Enhanced = All-in-One
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <p className="text-gray-300 mb-4">No more jumping between Shopify, Meta Ads, Slack, Sheets, and Notion.</p>
+                                <div className="space-y-2">
+                                    <div className="flex items-center text-gray-300">
+                                        <span className="w-2 h-2 bg-red-400 rounded-full mr-3" />
+                                        <span>Shopify</span>
                                     </div>
-                                    Essentials Enhanced
-                                </CardTitle>
+                                    <div className="flex items-center text-gray-300">
+                                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-3" />
+                                        <span>Meta Ads</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3" />
+                                        <span>Slack</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3" />
+                                        <span>Sheets</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <span className="w-2 h-2 bg-purple-400 rounded-full mr-3" />
+                                        <span>Notion</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-gray-300 mb-4">Your store, team, customers, cash, ads, VIPs, and content are all in one system.</p>
+                                <div className="space-y-2">
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Your store</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Your team</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Your customers</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Your cash</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Your ads</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Your VIPs</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Your content</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Detailed Comparison Table */}
+                    <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/20 mb-12">
+                        <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                            <Target className="w-6 h-6 mr-3 text-blue-400" />
+                            Essentials Enhanced vs Competitors
+                        </h3>
+
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-sm">
+                                <thead>
+                                    <tr className="border-b border-gray-700">
+                                        <th className="text-white font-semibold py-4 px-4 text-left">Feature / Tool</th>
+                                        <th className="text-white font-semibold py-4 px-4 text-center">Essentials Enhanced</th>
+                                        <th className="text-white font-semibold py-4 px-4 text-center">Traditional SaaS Tools</th>
+                                        <th className="text-white font-semibold py-4 px-4 text-center">Analytics Dashboards</th>
+                                        <th className="text-white font-semibold py-4 px-4 text-center">Team Management Tools</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="space-y-2">
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">AI Business OS (All-in-One)</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Real-Time AI Forecasts</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Cash Log System</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">AI ROI Predictions</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Ad Performance Engine</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Auto Messages & Replies</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-yellow-400">✅ (some)</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">AI Smart Alerts (Campaigns, Sales, Burnout)</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Team Manager with AI Feedback & Mood Check</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Smart Drops Tracker</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">VIP Customer Engine</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Competitor Insights + Alerts</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">AI-Powered To-Do Builder</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-yellow-400">✅ (manual)</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">AI Summary Everywhere</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">AI Content Recommender</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Burnout + Motivation Tracker</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">AI Decision Logger + Feedback Generator</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Learning Path Tracker</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-700/30">
+                                        <td className="py-3 px-4 text-gray-300">Distraction + Focus Mode</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="py-3 px-4 text-gray-300">Ad Generator + ROAS Advisor</td>
+                                        <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-green-400 mx-auto" /></td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                        <td className="py-3 px-4 text-center text-red-400">❌</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    {/* Summary: Why We're Different */}
+                    <div className="bg-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700 mb-12">
+                        <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                            <Brain className="w-6 h-6 mr-3 text-pink-400" />
+                            🧠 Summary: Why We're Different
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-6">
+                                <div className="bg-gray-700/50 rounded-xl p-6">
+                                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                                        <Sparkles className="w-5 h-5 mr-2 text-pink-400" />
+                                        Everything in One Place
+                                    </h4>
+                                    <p className="text-gray-300 text-sm">Others give you 1 tool. We give you the system — content, cash, customers, campaigns, and team.</p>
+                                </div>
+                                <div className="bg-gray-700/50 rounded-xl p-6">
+                                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                                        <Brain className="w-5 h-5 mr-2 text-purple-400" />
+                                        Built-in AI
+                                    </h4>
+                                    <p className="text-gray-300 text-sm">Our AI isn&apos;t just a chatbot. It reads your data, spots problems, recommends actions, and does the heavy lifting for you.</p>
+                                </div>
+                                <div className="bg-gray-700/50 rounded-xl p-6">
+                                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                                        <Target className="w-5 h-5 mr-2 text-blue-400" />
+                                        Business-Level Intelligence
+                                    </h4>
+                                    <p className="text-gray-300 text-sm">We&apos;re not a &quot;dashboard.&quot; We&apos;re a command center for real business owners who want to scale smart.</p>
+                                </div>
+                            </div>
+                            <div className="space-y-6">
+                                <div className="bg-gray-700/50 rounded-xl p-6">
+                                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                                        <Users className="w-5 h-5 mr-2 text-green-400" />
+                                        Human + Business Insights
+                                    </h4>
+                                    <p className="text-gray-300 text-sm">Only we combine marketing metrics and human signals like mood, burnout, distractions, and collaboration mapping.</p>
+                                </div>
+                                <div className="bg-gray-700/50 rounded-xl p-6">
+                                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                                        <DollarSign className="w-5 h-5 mr-2 text-yellow-400" />
+                                        Real ROI Tracking
+                                    </h4>
+                                    <p className="text-gray-300 text-sm">You don&apos;t just see numbers. You see value: who made you money, which ads worked, and where you&apos;re wasting resources.</p>
+                                </div>
+                                <div className="bg-gray-700/50 rounded-xl p-6">
+                                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                                        <Zap className="w-5 h-5 mr-2 text-red-400" />
+                                        Automation That Replaces People
+                                    </h4>
+                                    <p className="text-gray-300 text-sm">You won&apos;t need 10 tools and 10 employees. Essentials Enhanced will run 70% of it, faster and cheaper.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* How much time do you save? */}
+                    <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 backdrop-blur-xl rounded-3xl p-8 border border-pink-500/20 mb-12">
+                        <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                            <Clock className="w-6 h-6 mr-3 text-yellow-400" />
+                            🕒 How much time do you save?
+                        </h3>
+                        <div className="text-center mb-8">
+                            <p className="text-xl text-gray-300 mb-4">If your team is 100 people…</p>
+                                                            <p className="text-3xl font-bold text-green-400">You&apos;ll only need 30.</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 className="text-lg font-semibold text-white mb-4">Let our AI handle:</h4>
+                                <div className="space-y-3">
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Campaign optimization</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Sales forecasting</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Team tracking</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Auto-messaging</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>VIP analysis</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <Check className="w-4 h-4 text-green-400 mr-3" />
+                                        <span>Competitor reporting</span>
+                                    </div>
+                                    <div className="flex items-center text-gray-300">
+                                        <span className="text-pink-400 font-semibold">…and more</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bg-gray-700/50 rounded-xl p-6">
+                                <h4 className="text-lg font-semibold text-white mb-4">Time Savings Calculator</h4>
+                                <div className="space-y-4">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-gray-300">Manual reporting</span>
+                                        <span className="text-red-400">-80%</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-gray-300">Campaign management</span>
+                                        <span className="text-red-400">-70%</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-gray-300">Team coordination</span>
+                                        <span className="text-red-400">-60%</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-gray-300">Customer support</span>
+                                        <span className="text-red-400">-90%</span>
+                                    </div>
+                                    <div className="border-t border-gray-600 pt-2 mt-4">
+                                        <div className="flex justify-between items-center">
+                                            <span className="text-white font-semibold">Total time saved</span>
+                                            <span className="text-green-400 font-bold">-75%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Call to Action */}
+                    <div className="text-center">
+                        <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/20">
+                            <h3 className="text-2xl font-bold text-white mb-4">
+                                ✨ You grow the brand.
+                            </h3>
+                            <h3 className="text-2xl font-bold text-white mb-6">
+                                We&apos;ll run the rest.
+                            </h3>
+                            <Button size="lg" className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-lg px-8 py-4">
+                                <Zap className="w-5 h-5 mr-2" />
+                                🔘 Start Now – Try Essentials Enhanced
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 2: What You Get (By Tool) */}
+            <section className="relative z-10 px-6 py-20">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                            What You Get
+                        </h2>
+                        <p className="text-xl text-gray-300">
+                            Every module designed to replace manual work with intelligent automation.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                                    <Brain className="w-6 h-6 text-white" />
+                                </div>
+                                <CardTitle className="text-xl text-white">AI Business Dashboard</CardTitle>
                             </CardHeader>
-                            <CardContent className="space-y-4">
-                                <div className="flex items-center text-green-400">
-                                    <Check className="w-5 h-5 mr-3" />
-                                    <span>Fully AI-Native</span>
-                                </div>
-                                <div className="flex items-center text-green-400">
-                                    <Check className="w-5 h-5 mr-3" />
-                                    <span>Automated Campaign Suggestions</span>
-                                </div>
-                                <div className="flex items-center text-green-400">
-                                    <Check className="w-5 h-5 mr-3" />
-                                    <span>WhatsApp + Instagram Integration</span>
-                                </div>
-                                <div className="flex items-center text-green-400">
-                                    <Check className="w-5 h-5 mr-3" />
-                                    <span>Real-Time VIP Tracking</span>
-                                </div>
-                                <div className="flex items-center text-green-400">
-                                    <Check className="w-5 h-5 mr-3" />
-                                    <span>AI-Generated Ads</span>
-                                </div>
-                                <div className="flex items-center text-green-400">
-                                    <Check className="w-5 h-5 mr-3" />
-                                    <span>Multi-Platform Audience Timing</span>
-                                </div>
-                                <div className="flex items-center text-green-400">
-                                    <Check className="w-5 h-5 mr-3" />
-                                    <span>Integrated Cash Log + Forecast</span>
-                                </div>
-                                <div className="flex items-center text-green-400">
-                                    <Check className="w-5 h-5 mr-3" />
-                                    <span>AI-Synced Social Media Manager</span>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">See every weak spot + AI insights to fix it.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Real-time KPI tracking</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>AI-powered insights</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Predictive alerts</span>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-red-500/20">
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group">
                             <CardHeader>
-                                <CardTitle className="text-2xl text-white flex items-center">
-                                    <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mr-3">
-                                        <Shield className="w-5 h-5 text-white" />
-                                    </div>
-                                    Other Tools
-                                </CardTitle>
+                                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
+                                    <BarChart3 className="w-6 h-6 text-white" />
+                                </div>
+                                <CardTitle className="text-xl text-white">Ad Performance</CardTitle>
                             </CardHeader>
-                            <CardContent className="space-y-4">
-                                <div className="flex items-center text-red-400">
-                                    <span className="w-5 h-5 mr-3 text-xl">❌</span>
-                                    <span>Just Reports (No AI)</span>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">Auto-track spend, ROAS, and get alerts when CPM spikes.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Multi-platform tracking</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>ROAS optimization</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>CPM spike alerts</span>
+                                    </div>
                                 </div>
-                                <div className="flex items-center text-red-400">
-                                    <span className="w-5 h-5 mr-3 text-xl">❌</span>
-                                    <span>Manual Campaign Management</span>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-green-500/20 hover:border-green-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                                    <DollarSign className="w-6 h-6 text-white" />
                                 </div>
-                                <div className="flex items-center text-red-400">
-                                    <span className="w-5 h-5 mr-3 text-xl">❌</span>
-                                    <span>Partial Integration</span>
+                                <CardTitle className="text-xl text-white">Cash Log</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">See exactly how much you earn or lose each day.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Daily profit tracking</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Expense categorization</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>ROI analysis</span>
+                                    </div>
                                 </div>
-                                <div className="flex items-center text-red-400">
-                                    <span className="w-5 h-5 mr-3 text-xl">❌</span>
-                                    <span>No VIP Tracking</span>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4">
+                                    <TrendingUp className="w-6 h-6 text-white" />
                                 </div>
-                                <div className="flex items-center text-red-400">
-                                    <span className="w-5 h-5 mr-3 text-xl">❌</span>
-                                    <span>Manual Ad Creation</span>
+                                <CardTitle className="text-xl text-white">ROI Forecast Engine</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">Know what your next campaign will return — before you launch.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Predictive modeling</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Campaign optimization</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Budget allocation</span>
+                                    </div>
                                 </div>
-                                <div className="flex items-center text-red-400">
-                                    <span className="w-5 h-5 mr-3 text-xl">❌</span>
-                                    <span>Basic Scheduling</span>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
+                                    <MessageSquare className="w-6 h-6 text-white" />
                                 </div>
-                                <div className="flex items-center text-red-400">
-                                    <span className="w-5 h-5 mr-3 text-xl">❌</span>
-                                    <span>Separate Financial Tools</span>
+                                <CardTitle className="text-xl text-white">Auto Replies</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">Auto-answer DMs, comments, and messages in real time.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Smart responses</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Multi-platform sync</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>24/7 availability</span>
+                                    </div>
                                 </div>
-                                <div className="flex items-center text-red-400">
-                                    <span className="w-5 h-5 mr-3 text-xl">❌</span>
-                                    <span>Manual Social Management</span>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-red-500/20 hover:border-red-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
+                                    <Zap className="w-6 h-6 text-white" />
+                                </div>
+                                <CardTitle className="text-xl text-white">Auto Messages</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">Create automated UGC reply flows, send WhatsApp offers, email drops.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>UGC automation</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>WhatsApp integration</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Email campaigns</span>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                                    <Users className="w-6 h-6 text-white" />
+                                </div>
+                                <CardTitle className="text-xl text-white">Audience Tracker</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">Track which content brings high-buying users.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>High-value user identification</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Content performance analysis</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Engagement scoring</span>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-teal-500/20 hover:border-teal-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4">
+                                    <Heart className="w-6 h-6 text-white" />
+                                </div>
+                                <CardTitle className="text-xl text-white">Team Manager</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">Monitor, manage, and reduce your team load by 70%.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Performance tracking</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Mood AI monitoring</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Workload optimization</span>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
+                                    <Eye className="w-6 h-6 text-white" />
+                                </div>
+                                <CardTitle className="text-xl text-white">Competitor Tracker</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">Know what your rivals post, spend, and where they fail.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Competitor analysis</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Spend tracking</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Gap identification</span>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-600 rounded-xl flex items-center justify-center mb-4">
+                                    <Crown className="w-6 h-6 text-white" />
+                                </div>
+                                <CardTitle className="text-xl text-white">VIP Customers Engine</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">Identify top buyers, automate retention, and grow LTV.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>VIP identification</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Automated retention</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>LTV optimization</span>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-gray-800/50 backdrop-blur-xl border-violet-500/20 hover:border-violet-500/40 transition-all duration-300 group">
+                            <CardHeader>
+                                <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                                    <Gift className="w-6 h-6 text-white" />
+                                </div>
+                                <CardTitle className="text-xl text-white">Analytics + Drops</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-300 mb-4">Know when to drop products, based on real data.</p>
+                                <div className="space-y-2 text-sm text-gray-400">
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Data-driven timing</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Product performance</span>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <Check className="w-4 h-4 mr-2 text-green-400" />
+                                        <span>Market analysis</span>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
@@ -215,32 +854,27 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Savings Calculator */}
+            {/* Section 3: Time & Cost Saving */}
             <section className="relative z-10 px-6 py-20">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-16">
-                        What You'll Save
+                                                    A team of 100? You&apos;ll only need 30.
                     </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                        <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl p-8 border border-purple-500/20">
-                            <Clock className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                            <h3 className="text-2xl font-bold text-white mb-2">Time</h3>
-                            <p className="text-gray-300">Save 25+ hours/week by removing manual reports, scheduling, and performance tracking.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div className="bg-gray-800/50 backdrop-blur-xl rounded-2xl p-8 border border-red-500/20">
+                            <Clock className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                            <h3 className="text-2xl font-bold text-white mb-2">Save Time</h3>
+                            <p className="text-gray-300">Cut reporting time by 80%. Get insights instantly, not weekly.</p>
                         </div>
-                        <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl p-8 border border-pink-500/20">
-                            <DollarSign className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-                            <h3 className="text-2xl font-bold text-white mb-2">Money</h3>
-                            <p className="text-gray-300">Cut 3rd-party tool costs by up to $320/month (replacing 7–10 separate apps).</p>
-                        </div>
-                        <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl p-8 border border-blue-500/20">
-                            <Zap className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                            <h3 className="text-2xl font-bold text-white mb-2">Effort</h3>
-                            <p className="text-gray-300">Get insights + suggestions in real-time — no more digging or second-guessing.</p>
+                        <div className="bg-gray-800/50 backdrop-blur-xl rounded-2xl p-8 border border-green-500/20">
+                            <DollarSign className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                            <h3 className="text-2xl font-bold text-white mb-2">Save Money</h3>
+                            <p className="text-gray-300">Replace 10+ tools with one platform. Cut costs by 70%.</p>
                         </div>
                     </div>
 
-                    <div className="bg-slate-800/50 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/20">
+                    <div className="bg-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/20">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                             <div className="text-left">
                                 <h3 className="text-2xl font-bold text-red-400 mb-4">Without Us</h3>
@@ -287,437 +921,99 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Modules Section */}
-            <section className="relative z-10 px-6 py-20">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            All-In-One Modules
-                        </h2>
-                        <p className="text-xl text-gray-300">
-                            Everything you need to scale your business, powered by AI.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group">
-                            <CardHeader>
-                                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
-                                    <Brain className="w-6 h-6 text-white" />
-                                </div>
-                                <CardTitle className="text-xl text-white">AI Business Dashboard</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300 mb-4">Real-time insights. Auto-generated summaries. Predictive alerts.</p>
-                                <div className="space-y-2 text-sm text-gray-400">
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Live KPI tracking</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>AI-powered insights</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Predictive analytics</span>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 group">
-                            <CardHeader>
-                                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-xl flex items-center justify-center mb-4">
-                                    <Users className="w-6 h-6 text-white" />
-                                </div>
-                                <CardTitle className="text-xl text-white">Audience Tracker</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300 mb-4">Track & re-engage your top followers. Detect when they drop off.</p>
-                                <div className="space-y-2 text-sm text-gray-400">
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>VIP identification</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Engagement scoring</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Drop-off alerts</span>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group">
-                            <CardHeader>
-                                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
-                                    <DollarSign className="w-6 h-6 text-white" />
-                                </div>
-                                <CardTitle className="text-xl text-white">Cash Log</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300 mb-4">Know exactly where your money is going — and what you should stop spending on.</p>
-                                <div className="space-y-2 text-sm text-gray-400">
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Expense tracking</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>ROI analysis</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Budget forecasting</span>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-green-500/20 hover:border-green-500/40 transition-all duration-300 group">
-                            <CardHeader>
-                                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-                                    <Zap className="w-6 h-6 text-white" />
-                                </div>
-                                <CardTitle className="text-xl text-white">Auto Ads</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300 mb-4">AI writes, plans, and predicts your campaigns — before you even ask.</p>
-                                <div className="space-y-2 text-sm text-gray-400">
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>AI copy generation</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Performance prediction</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Auto optimization</span>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 group">
-                            <CardHeader>
-                                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mb-4">
-                                    <Star className="w-6 h-6 text-white" />
-                                </div>
-                                <CardTitle className="text-xl text-white">VIP System</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300 mb-4">Get notified when your top buyer goes silent. Send a personalized message instantly.</p>
-                                <div className="space-y-2 text-sm text-gray-400">
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>VIP identification</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Automated outreach</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Personalization</span>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group">
-                            <CardHeader>
-                                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
-                                    <Clock className="w-6 h-6 text-white" />
-                                </div>
-                                <CardTitle className="text-xl text-white">Smart Scheduler</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300 mb-4">AI determines the perfect time to post for maximum engagement across all platforms.</p>
-                                <div className="space-y-2 text-sm text-gray-400">
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Optimal timing</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Cross-platform sync</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Auto-posting</span>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-            </section>
-
-            {/* Emotional Pitch */}
+            {/* Section 4: Who This Is For */}
             <section className="relative z-10 px-6 py-20">
                 <div className="max-w-4xl mx-auto text-center">
-                    <div className="bg-slate-800/50 backdrop-blur-xl rounded-3xl p-12 border border-purple-500/20">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-                            Why Choose Essentials Enhanced?
-                        </h2>
-                        <div className="space-y-6 text-lg text-gray-300">
-                            <p className="text-xl">
-                                "You're already doing the work. You just need something smarter to help you do it faster."
-                            </p>
-                            <p className="text-xl">
-                                "Your competitors are using 10 tools and losing time. You'll use one."
-                            </p>
-                            <p className="text-xl">
-                                "Every second your team spends copy-pasting between dashboards is money lost."
-                            </p>
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-16">
+                        Who This Is For
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700">
+                            <Users className="w-8 h-8 text-pink-400 mx-auto mb-4" />
+                            <h3 className="text-lg font-semibold text-white mb-2">E-commerce owners</h3>
+                            <p className="text-gray-300 text-sm">with no time</p>
+                        </div>
+                        <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700">
+                            <Zap className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                            <h3 className="text-lg font-semibold text-white mb-2">Teams tired</h3>
+                            <p className="text-gray-300 text-sm">of switching between tools</p>
+                        </div>
+                        <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700">
+                            <DollarSign className="w-8 h-8 text-green-400 mx-auto mb-4" />
+                            <h3 className="text-lg font-semibold text-white mb-2">Business owners</h3>
+                            <p className="text-gray-300 text-sm">spending $1k+ on ads</p>
+                        </div>
+                        <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700">
+                            <BarChart3 className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+                            <h3 className="text-lg font-semibold text-white mb-2">Marketers managing</h3>
+                            <p className="text-gray-300 text-sm">10+ clients</p>
+                        </div>
+                        <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700">
+                            <Crown className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
+                            <h3 className="text-lg font-semibold text-white mb-2">Founders scaling</h3>
+                            <p className="text-gray-300 text-sm">teams but burning out</p>
+                        </div>
+                        <div className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700">
+                            <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+                            <h3 className="text-lg font-semibold text-white mb-2">Anyone wanting</h3>
+                            <p className="text-gray-300 text-sm">AI to do the heavy lifting</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Testimonials */}
+            {/* Section 5: AI-First Design */}
             <section className="relative z-10 px-6 py-20">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            What Our Users Say
+                <div className="max-w-4xl mx-auto text-center">
+                    <div className="bg-gray-800/50 backdrop-blur-xl rounded-3xl p-12 border border-purple-500/20">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+                            Not just dashboards. Real AI actions.
                         </h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-purple-500/20">
-                            <CardContent className="p-8">
-                                <div className="flex items-center mb-4">
-                                    {[...Array(5)].map((_, i) => (
-                                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                                    ))}
-                                </div>
-                                <p className="text-gray-300 mb-6 text-lg">
-                                    "We went from 3 hours/day in spreadsheets to letting AI handle our drops and timing."
-                                </p>
-                                <div className="flex items-center">
-                                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4" />
-                                    <div>
-                                        <p className="text-white font-semibold">Sarah Chen</p>
-                                        <p className="text-gray-400">Founder, Luxe Fashion</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-pink-500/20">
-                            <CardContent className="p-8">
-                                <div className="flex items-center mb-4">
-                                    {[...Array(5)].map((_, i) => (
-                                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                                    ))}
-                                </div>
-                                <p className="text-gray-300 mb-6 text-lg">
-                                    "No more guessing. I know what to post, when to post, and who to reach — daily."
-                                </p>
-                                <div className="flex items-center">
-                                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-full mr-4" />
-                                    <div>
-                                        <p className="text-white font-semibold">Ahmed Hassan</p>
-                                        <p className="text-gray-400">CEO, Digital Agency</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
+                        <p className="text-xl text-gray-300 mb-8">
+                            Most tools give you charts. Essentials Enhanced reads them, explains them, and tells you what to do next — then does it.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="bg-gray-700/50 rounded-xl p-6">
+                                <Brain className="w-8 h-8 text-pink-400 mx-auto mb-4" />
+                                <h3 className="text-lg font-semibold text-white mb-2">AI Reads</h3>
+                                <p className="text-gray-300 text-sm">Analyzes your data automatically</p>
+                            </div>
+                            <div className="bg-gray-700/50 rounded-xl p-6">
+                                <MessageSquare className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                                <h3 className="text-lg font-semibold text-white mb-2">AI Explains</h3>
+                                <p className="text-gray-300 text-sm">Tells you what it means</p>
+                            </div>
+                            <div className="bg-gray-700/50 rounded-xl p-6">
+                                <Zap className="w-8 h-8 text-green-400 mx-auto mb-4" />
+                                <h3 className="text-lg font-semibold text-white mb-2">AI Acts</h3>
+                                <p className="text-gray-300 text-sm">Executes the solution for you</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
+            {/* Section 6: Final CTA */}
             <section className="relative z-10 px-6 py-20">
                 <div className="max-w-4xl mx-auto text-center">
                     <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl p-12 border border-purple-500/20">
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            You work hard. Let AI take the rest.
+                            Try the OS that works like a full team.
                         </h2>
                         <p className="text-xl text-gray-300 mb-8">
-                            Join thousands of businesses already scaling with AI-powered insights.
+                            No more dashboards. No more guesswork. Just smart growth — on autopilot.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-lg px-8 py-4">
+                            <Button size="lg" className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-lg px-8 py-4">
                                 <Zap className="w-5 h-5 mr-2" />
-                                Start Free Trial
+                                Get Started Today
                             </Button>
                             <Button size="lg" variant="outline" className="border-purple-500 text-purple-300 hover:bg-purple-500 hover:text-white text-lg px-8 py-4">
                                 <Play className="w-5 h-5 mr-2" />
-                                Get a Demo
+                                Live Demo
                             </Button>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Pricing */}
-            <section className="relative z-10 px-6 py-20">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            Simple, Transparent Pricing
-                        </h2>
-                        <p className="text-xl text-gray-300">
-                            No hidden fees. No setup charges. Just results.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-gray-500/20">
-                            <CardHeader className="text-center">
-                                <CardTitle className="text-2xl text-white">Starter</CardTitle>
-                                <div className="text-4xl font-bold text-white">$49<span className="text-lg text-gray-400">/mo</span></div>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <div className="space-y-2 text-sm text-gray-300">
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Core AI features</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>5 integrations</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Basic analytics</span>
-                                    </div>
-                                </div>
-                                <Button className="w-full bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700">
-                                    Get Started
-                                </Button>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-purple-500/40 relative">
-                            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                                <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0">
-                                    Most Popular
-                                </Badge>
-                            </div>
-                            <CardHeader className="text-center">
-                                <CardTitle className="text-2xl text-white">Pro</CardTitle>
-                                <div className="text-4xl font-bold text-white">$89<span className="text-lg text-gray-400">/mo</span></div>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <div className="space-y-2 text-sm text-gray-300">
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Unlimited integrations</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Full AI access</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Smart alerts + summaries</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Priority support</span>
-                                    </div>
-                                </div>
-                                <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
-                                    Get Started
-                                </Button>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-gray-500/20">
-                            <CardHeader className="text-center">
-                                <CardTitle className="text-2xl text-white">Enterprise</CardTitle>
-                                <div className="text-4xl font-bold text-white">Custom</div>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <div className="space-y-2 text-sm text-gray-300">
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Custom integrations</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Dedicated support</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>White-label options</span>
-                                    </div>
-                                    <div className="flex items-center">
-                                        <Check className="w-4 h-4 mr-2 text-green-400" />
-                                        <span>Custom AI training</span>
-                                    </div>
-                                </div>
-                                <Button className="w-full bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700">
-                                    Contact Sales
-                                </Button>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-            </section>
-
-            {/* FAQ */}
-            <section className="relative z-10 px-6 py-20">
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            Frequently Asked Questions
-                        </h2>
-                    </div>
-
-                    <div className="space-y-6">
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-purple-500/20">
-                            <CardHeader>
-                                <CardTitle className="text-white">How does this connect with my Instagram?</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300">
-                                    We use Instagram's official API to securely connect your account. You authorize the connection once, and we handle the rest. Your data stays private and secure.
-                                </p>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-purple-500/20">
-                            <CardHeader>
-                                <CardTitle className="text-white">Can I cancel anytime?</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300">
-                                    Absolutely. No long-term contracts. Cancel anytime from your dashboard. We'll even help you export your data if needed.
-                                </p>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-purple-500/20">
-                            <CardHeader>
-                                <CardTitle className="text-white">Do I need to code anything?</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300">
-                                    Not at all. Everything is plug-and-play. Connect your accounts, and AI takes over. No technical knowledge required.
-                                </p>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="bg-slate-800/50 backdrop-blur-xl border-purple-500/20">
-                            <CardHeader>
-                                <CardTitle className="text-white">Does it replace my current analytics tool?</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-300">
-                                    We integrate with your existing tools and enhance them with AI. You can keep using what you love, but now with intelligent insights and automation.
-                                </p>
-                            </CardContent>
-                        </Card>
                     </div>
                 </div>
             </section>
@@ -727,7 +1023,7 @@ export default function LandingPage() {
                 <div className="max-w-6xl mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex items-center space-x-2 mb-4 md:mb-0">
-                            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                            <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
                                 <Brain className="w-5 h-5 text-white" />
                             </div>
                             <span className="text-xl font-bold text-white">Essentials Enhanced</span>

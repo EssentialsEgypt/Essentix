@@ -153,7 +153,7 @@ const mockAdBlueprint: AdBlueprint = {
 const mockVariants: AdVariant[] = [
     {
         id: "var-1",
-        hook: "Only 9 left in Egypt. Don't miss the drop again.",
+        hook: "Only 9 left in Egypt. Don&apos;t miss the drop again.",
         cta: "Secure Yours",
         visualAngle: "Close-up of logo with scarcity overlay",
         emotionalDriver: "FOMO",

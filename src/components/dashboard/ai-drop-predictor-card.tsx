@@ -133,7 +133,7 @@ export function AIDropPredictorCard() {
                             size="sm"
                             onClick={generateNewPrediction}
                             disabled={isLoading}
-                            variant="glass"
+                            variant="premium"
                         >
                             <RefreshCw className="w-4 h-4" />
                         </Button>

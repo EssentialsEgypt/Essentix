@@ -144,7 +144,7 @@ const mockCustomerSegments: CustomerSegment[] = [
         tone: "casual",
         messageTemplates: [
             "Yo! 🔥 {product_name} is calling your name!",
-            "Don't sleep on this drop 💯",
+            "Don&apos;t sleep on this drop 💯",
             "This is the vibe you've been looking for ✨"
         ],
         isActive: true,

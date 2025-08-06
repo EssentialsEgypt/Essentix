@@ -1,4 +1,4 @@
-import { verifyToken } from '../utils/auth.js';
+import { verifyToken } from '../utils/auth';
 
 /**
  * Higher-order function to protect API handlers using JWT authentication.

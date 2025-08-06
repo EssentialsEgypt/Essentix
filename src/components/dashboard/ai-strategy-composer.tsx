@@ -17,7 +17,7 @@ import {
   Package, Tag, Percent, Activity, History, Play, Pause, Settings,
   Download, Share2, Bell, CheckCircle, AlertTriangle, Star, ArrowRight,
   Plus, Edit, Trash, Eye, Copy, ExternalLink, ChevronRight, ChevronDown,
-  Lightbulb, Rocket, Shield, Crown, Heart, EyeOff, EyeOn, RefreshCw,
+  Lightbulb, Rocket, Shield, Crown, Heart, EyeOff, RefreshCw,
   Save, Loader2, Sparkles, Target as TargetIcon, Calendar as CalendarIcon,
   Users as UsersIcon, DollarSign as DollarSignIcon, BarChart3 as BarChart3Icon
 } from "lucide-react"
@@ -182,7 +182,7 @@ export function AIStrategyComposer() {
           if (strategy.id === strategyId) {
             return {
               ...strategy,
-              actions: strategy.actions.map(action => 
+              actions: strategy.actions.map(action =>
                 action.id === actionId ? { ...action, status } : action
               )
             }
@@ -322,7 +322,7 @@ export function AIStrategyComposer() {
                     <h3 className="font-semibold text-purple-900">AI Goal Understanding</h3>
                   </div>
                   <p className="text-sm text-purple-700 mb-4">
-                    Tell me what you want to achieve. I'll analyze your goal and create a complete strategy.
+                    Tell me what you want to achieve. I&apos;ll analyze your goal and create a complete strategy.
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-2 text-sm text-purple-600">
@@ -342,15 +342,15 @@ export function AIStrategyComposer() {
 
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="goal-input">What's your goal?</Label>
+                    <Label htmlFor="goal-input">What&apos;s your goal?</Label>
                     <Textarea
                       id="goal-input"
-                      placeholder="e.g., I want to generate 300,000 EGP this month, I need to hit 1,000 orders in the next 21 days, I'm launching a new hoodie — help me do it right..."
+                      placeholder="e.g., I want to generate 300,000 EGP this month, I need to hit 1,000 orders in the next 21 days, I&apos;m launching a new hoodie — help me do it right..."
                       className="mt-1"
                       rows={4}
                     />
                   </div>
-                  <Button 
+                  <Button
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
                     disabled={isLoading}
                   >

@@ -1,7 +1,7 @@
 "use client"
 
-import { EnhancedSocialMediaDashboard } from "@/components/dashboard/enhanced-social-media-dashboard"
+import { AIPoweredDashboardOverview } from "@/components/dashboard/ai-powered-dashboard-overview"
 
 export default function DashboardPage() {
-  return <EnhancedSocialMediaDashboard />
+  return <AIPoweredDashboardOverview />
 }

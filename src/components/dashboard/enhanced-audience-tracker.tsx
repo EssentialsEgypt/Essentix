@@ -92,7 +92,8 @@ import {
   Clock as AITime,
   MapPin as AILocation,
   Users as AIGroup,
-  Activity as AIPulse
+  Activity as AIPulse,
+  DollarSign
 } from "lucide-react"
 
 // Enhanced mock audience tracker data with demographics and response rates
@@ -569,7 +570,7 @@ export function EnhancedAudienceTracker() {
 
       {/* Main Content Tabs */}
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-        <TabsList className="grid w-full grid-cols-9">
+        <TabsList className="grid w-full grid-cols-10">
           <TabsTrigger value="overview">Overview</TabsTrigger>
           <TabsTrigger value="ai-timing">AI Timing</TabsTrigger>
           <TabsTrigger value="forecaster">Forecaster</TabsTrigger>
@@ -579,6 +580,7 @@ export function EnhancedAudienceTracker() {
           <TabsTrigger value="ai-suggestions">AI Suggestions</TabsTrigger>
           <TabsTrigger value="vip-customers">VIP Customers</TabsTrigger>
           <TabsTrigger value="demographics">Demographics</TabsTrigger>
+          <TabsTrigger value="abandoned-checkouts">Abandoned Checkouts</TabsTrigger>
         </TabsList>
 
         {/* Overview Tab - Original Content */}
@@ -853,7 +855,7 @@ export function EnhancedAudienceTracker() {
                   <Bullseye className="h-5 w-5" />
                   Drop Readiness Score
                 </CardTitle>
-                <CardDescription>AI score showing how "ready" your audience is for a drop</CardDescription>
+                <CardDescription>AI score showing how &quot;ready&quot; your audience is for a drop</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="text-center space-y-4">
@@ -882,7 +884,7 @@ export function EnhancedAudienceTracker() {
             <Card>
               <CardHeader>
                 <CardTitle>Score Factors</CardTitle>
-                <CardDescription>What's contributing to your readiness score</CardDescription>
+                <CardDescription>What&apos;s contributing to your readiness score</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -1149,7 +1151,7 @@ export function EnhancedAudienceTracker() {
                 <div className="space-y-3">
                   {vipCustomerData.vipAlerts.map((alert) => (
                     <div key={alert.id} className={`p-3 border rounded-lg ${alert.priority === "high" ? "border-red-200 bg-red-50" :
-                        "border-yellow-200 bg-yellow-50"
+                      "border-yellow-200 bg-yellow-50"
                       }`}>
                       <div className="flex items-start gap-2">
                         <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
@@ -1332,6 +1334,90 @@ export function EnhancedAudienceTracker() {
                     {demographics.emails.map((email, idx) => (
                       <li key={idx}>{email}</li>
                     ))}
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        {/* Abandoned Checkouts Tab */}
+        <TabsContent value="abandoned-checkouts" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <ShoppingCart className="h-5 w-5" />
+                Abandoned Checkout Recovery
+              </CardTitle>
+              <CardDescription>
+                AI-powered recovery system for abandoned Shopify carts
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">Recover Lost Revenue</h3>
+                    <p className="text-gray-300 text-sm">
+                      Automatically detect and recover abandoned carts with AI-powered follow-up strategies
+                    </p>
+                  </div>
+                  <Button
+                    onClick={() => window.location.href = '/dashboard/audience-tracker/abandoned-checkouts'}
+                    className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700"
+                  >
+                    <ShoppingCart className="h-4 w-4 mr-2" />
+                    Open Recovery Dashboard
+                  </Button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <Card className="bg-gradient-to-r from-red-500/20 to-red-600/20 border-red-500/20">
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-sm text-gray-300">Abandoned Carts</p>
+                          <p className="text-2xl font-bold text-white">1,247</p>
+                        </div>
+                        <ShoppingCart className="h-8 w-8 text-red-400" />
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-gradient-to-r from-green-500/20 to-green-600/20 border-green-500/20">
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-sm text-gray-300">Recovered</p>
+                          <p className="text-2xl font-bold text-white">229</p>
+                        </div>
+                        <CheckCircle className="h-8 w-8 text-green-400" />
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 border-blue-500/20">
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-sm text-gray-300">Revenue Recovered</p>
+                          <p className="text-2xl font-bold text-white">$12,450</p>
+                        </div>
+                        <DollarSign className="h-8 w-8 text-blue-400" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-500/20 to-pink-600/20 border-purple-500/20 rounded-lg p-4">
+                  <h4 className="text-white font-medium mb-2">🚀 Key Features</h4>
+                  <ul className="space-y-2 text-sm text-gray-300">
+                    <li>• Real-time abandoned cart detection via Shopify webhooks</li>
+                    <li>• AI-powered abandonment reason analysis</li>
+                    <li>• Automated follow-up via WhatsApp, Email, and SMS</li>
+                    <li>• Smart offer generation based on cart value and customer behavior</li>
+                    <li>• Complete recovery analytics and ROI tracking</li>
+                    <li>• Multi-channel follow-up flow builder</li>
                   </ul>
                 </div>
               </div>

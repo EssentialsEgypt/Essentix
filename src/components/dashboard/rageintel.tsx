@@ -160,7 +160,7 @@ export default function RageIntel() {
                 id: '1',
                 type: 'counter-post',
                 competitor: 'GrowthGuru',
-                generatedContent: "🔥 FLASH SALE: 24 Hours Only! Don't let @growthguru steal your customers. Our proven system generates 3x more leads. Limited spots available. DM \"RAGE\" to claim your spot! 💪",
+                generatedContent: "🔥 FLASH SALE: 24 Hours Only! Don&apos;t let @growthguru steal your customers. Our proven system generates 3x more leads. Limited spots available. DM &quot;RAGE&quot; to claim your spot! 💪",
                 status: 'ready',
                 timestamp: '2 minutes ago',
                 aiScore: 94

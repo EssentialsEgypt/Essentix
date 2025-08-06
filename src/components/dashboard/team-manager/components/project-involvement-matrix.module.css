@@ -1,0 +1,42 @@
+.involvementBar {
+  height: 0.5rem;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.involvementBarHigh {
+  background-color: rgb(34 197 94); /* bg-green-500 */
+}
+
+.involvementBarMedium {
+  background-color: rgb(234 179 8); /* bg-yellow-500 */
+}
+
+.involvementBarLow {
+  background-color: rgb(249 115 22); /* bg-orange-500 */
+}
+
+.involvementBarVeryLow {
+  background-color: rgb(239 68 68); /* bg-red-500 */
+}
+
+/* Involvement width classes */
+.involvementWidth10 { width: 10%; }
+.involvementWidth15 { width: 15%; }
+.involvementWidth20 { width: 20%; }
+.involvementWidth25 { width: 25%; }
+.involvementWidth30 { width: 30%; }
+.involvementWidth35 { width: 35%; }
+.involvementWidth40 { width: 40%; }
+.involvementWidth45 { width: 45%; }
+.involvementWidth50 { width: 50%; }
+.involvementWidth55 { width: 55%; }
+.involvementWidth60 { width: 60%; }
+.involvementWidth65 { width: 65%; }
+.involvementWidth70 { width: 70%; }
+.involvementWidth75 { width: 75%; }
+.involvementWidth80 { width: 80%; }
+.involvementWidth85 { width: 85%; }
+.involvementWidth90 { width: 90%; }
+.involvementWidth95 { width: 95%; }
+.involvementWidth100 { width: 100%; }

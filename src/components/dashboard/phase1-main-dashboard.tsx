@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { Sidebar, SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarProvider } from "@/components/ui/sidebar"
-import { BarChart3, Instagram, Facebook, Youtube, Mail, MessageCircle, ShoppingCart, TrendingUp, Target } from "lucide-react"
+import { BarChart3, Instagram, Facebook, Youtube, Mail, MessageCircle, ShoppingCart, TrendingUp, Target, Users } from "lucide-react"
 import supabase from "@/utils/supabaseClient"
 import RageIntel from "./rageintel"
+import { TeamManager } from "./team-manager"
 
 function AlertCard({ alerts }: { alerts: Array<{ id: string; message: string }> }) {
   return (
@@ -31,6 +32,7 @@ const sidebarItems = [
   { id: "whatsapp", label: "WhatsApp / UGC", icon: MessageCircle },
   { id: "sales", label: "Sales & Conversion", icon: ShoppingCart },
   { id: "rageintel", label: "RageIntel™", icon: Target },
+  { id: "team", label: "Team Manager", icon: Users },
 ]
 
 export function Phase1MainDashboard() {
@@ -82,6 +84,8 @@ export function Phase1MainDashboard() {
         return <Placeholder title="Sales Attribution & Conversion Tracking" description="Funnel chart, attribution model, UTM performance, product sales, conversion ratios." />
       case "rageintel":
         return <RageIntel />
+      case "team":
+        return <TeamManager />
       default:
         return (
           <>
